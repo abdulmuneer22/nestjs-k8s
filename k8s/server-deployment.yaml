@@ -15,6 +15,17 @@ spec:
       containers:
         - name: server
           image: skitecode/server:latest
+          env:
+            - name: DB_HOST
+              value: database
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_USERNAME
+              value: postgres
+            - name: DB_PASSWORD
+              value: postgres
+            - name: DB_NAME
+              value: postgres
           resources:
             requests:
               memory: "64Mi"
